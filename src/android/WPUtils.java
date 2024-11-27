@@ -108,7 +108,7 @@ public class WPUtils extends CordovaPlugin {
         public void run() {
             WallpaperManager wallpaperManager = WallpaperManager.getInstance(context);
             try {
-                wallpaperManager.setBitmap(bmp);
+                 wallpaperManager.setBitmap(bmp, null, true, WallpaperManager.FLAG_SYSTEM);
             } catch (IOException e) {
                 callbackContext.error(e.getMessage());
                 e.printStackTrace();
